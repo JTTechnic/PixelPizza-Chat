@@ -136,6 +136,14 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			trigger: "master of puppets i am pulling your strings",
 			reply: "Twisting your mind and smashing your dreams"
+		},
+		{
+			trigger: "i love you",
+			reply: [
+				"thank you",
+				"i love me too",
+				"glad to hear it"
+			]
 		}
 	];
 
