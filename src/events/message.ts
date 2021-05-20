@@ -157,6 +157,10 @@ module.exports = class MessageEvent extends ClientEvent {
 				"That's nice",
 				"Great!"
 			]
+		},
+		{
+			trigger: "what do you do",
+			reply: "I make pizza's and deliver them"
 		}
 	];
 
@@ -213,6 +217,10 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			search: " ur ",
 			replacement: " you are "
+		},
+		{
+			search: "cmon",
+			replacement: "come on"
 		}
 	];
 
