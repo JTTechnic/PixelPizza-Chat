@@ -111,12 +111,26 @@ module.exports = class MessageEvent extends ClientEvent {
 		},
 		{
 			trigger: [
-				"lol",
-				"lmao"
+				"Lol",
+				"Lmao"
 			],
 			reply: [
 				"lol",
 				"lmao"
+			]
+		},
+		{
+			trigger: [
+				"ok",
+				"okay",
+				"kk",
+				"k"
+			],
+			reply: [
+				"Not okay",
+				"Okay",
+				"Not ok",
+				"ok"
 			]
 		}
 	];
