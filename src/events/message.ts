@@ -108,6 +108,13 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			trigger: "china",
 			reply: "China"
+		},
+		{
+			trigger: "lol",
+			reply: [
+				"lol",
+				"lmao"
+			]
 		}
 	];
 
@@ -135,6 +142,10 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			search: " u ",
 			replacement: "you"
+		},
+		{
+			search: "im",
+			replacement: "i am"
 		}
 	];
 
