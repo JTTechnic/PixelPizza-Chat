@@ -123,7 +123,8 @@ module.exports = class MessageEvent extends ClientEvent {
 
 	private readonly unknownResponses: string | string[] = [
 		"Could you say that again?",
-		"I don't understand"
+		"I don't understand",
+		"What does that mean?"
 	];
 
 	private readonly replacements: {
