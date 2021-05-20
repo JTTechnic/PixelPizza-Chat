@@ -204,7 +204,7 @@ module.exports = class MessageEvent extends ClientEvent {
 		if(message.webhookID || message.author.bot || (message.channel.type !== "dm" && message.channel.id !== process.env.TALK_CHANNEL_ID) || !message.content) return;
 
 		// replace unneeded characters and caps
-		let messageText = message.content.toLowerCase().replace(/[^\w\s\d]/gi, "");
+		let messageText: string = message.content.toLowerCase().replace(/[^\w\s\d]/gi, "");
 
 		// replace shorter versions of words and abbreviations
 		for(const replacement of this.replacements){
@@ -236,8 +236,13 @@ module.exports = class MessageEvent extends ClientEvent {
 			}
 			return false;
 		});
+		const exactResponse = possibleResponses.find(response => {
+			// find a response that exactly matches the trigger
+			const triggers = typeof(response.trigger) === "string" ? [response.trigger] : response.trigger;
+			return triggers.includes(messageText);
+		});
 		// TODO change possibleResponses[0] to the most likely
-		const foundResponses = possibleResponses[0]?.reply ?? this.unknownResponses;
+		const foundResponses = exactResponse ? exactResponse.reply : (possibleResponses[0]?.reply ?? this.unknownResponses);
 		const foundResponsesArray = typeof(foundResponses) === "string" ? [foundResponses] : foundResponses;
 
 		const chosenReply = foundResponsesArray[Math.floor(Math.random() * foundResponsesArray.length)];
