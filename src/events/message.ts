@@ -26,7 +26,8 @@ module.exports = class MessageEvent extends ClientEvent {
 			trigger: [
 				"how are you",
 				"are you doing good",
-				"you good"
+				"you good",
+				"are you ok"
 			],
 			reply: [
 				"I'm Fine... how are you?",
