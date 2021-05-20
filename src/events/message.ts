@@ -149,6 +149,8 @@ module.exports = class MessageEvent extends ClientEvent {
 			messageText = messageText.replace(new RegExp(replacement.search, "g"), replacement.replacement);
 		}
 
+		if(!messageText) return;
+
 		const words = messageText.split(/ +/);
 
 		const possibleResponses = this.responses.filter(response => {
