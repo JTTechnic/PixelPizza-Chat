@@ -184,15 +184,15 @@ module.exports = class MessageEvent extends ClientEvent {
 		},
 		{
 			search: " u ",
-			replacement: "you"
+			replacement: " you "
 		},
 		{
 			search: " u$",
-			replacement: "you"
+			replacement: " you"
 		},
 		{
 			search: " r ",
-			replacement: "are"
+			replacement: " are "
 		},
 		{
 			search: "im",
@@ -209,6 +209,10 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			search: "pixel pizza0000",
 			replacement: ""
+		},
+		{
+			search: " ur ",
+			replacement: " you are "
 		}
 	];
 
