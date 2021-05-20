@@ -132,6 +132,10 @@ module.exports = class MessageEvent extends ClientEvent {
 				"Not ok",
 				"ok"
 			]
+		},
+		{
+			trigger: "master of puppets i am pulling your strings",
+			reply: "Twisting your mind and smashing your dreams"
 		}
 	];
 
@@ -164,6 +168,14 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			search: "im",
 			replacement: "i am"
+		},
+		{
+			search: "ofc",
+			replacement: "of course"
+		},
+		{
+			search: "you're",
+			replacement: "you are"
 		}
 	];
 
