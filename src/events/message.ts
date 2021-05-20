@@ -174,6 +174,10 @@ module.exports = class MessageEvent extends ClientEvent {
 			replacement: "you"
 		},
 		{
+			search: " r ",
+			replacement: "are"
+		},
+		{
 			search: "im",
 			replacement: "i am"
 		},
@@ -182,7 +186,7 @@ module.exports = class MessageEvent extends ClientEvent {
 			replacement: "of course"
 		},
 		{
-			search: "you're",
+			search: "youre",
 			replacement: "you are"
 		},
 		{
