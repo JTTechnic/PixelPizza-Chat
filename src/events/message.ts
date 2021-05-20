@@ -227,6 +227,16 @@ module.exports = class MessageEvent extends ClientEvent {
 
 		const words = messageText.split(/ +/);
 
+		// check for duplicate words
+		let lastWord: string = "";
+		for(const index in words){
+			const word = words[index];
+			if(lastWord == word){
+				words.splice(parseInt(index), 1);
+			}
+		}
+		messageText = words.join(" ");
+
 		const possibleResponses = this.responses.filter(response => {
 			// filter for words in the filter
 			const triggers = typeof(response.trigger) === "string" ? [response.trigger] : response.trigger;
