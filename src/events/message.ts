@@ -141,9 +141,21 @@ module.exports = class MessageEvent extends ClientEvent {
 		{
 			trigger: "i love you",
 			reply: [
-				"thank you",
-				"i love me too",
-				"glad to hear it"
+				"Thank you",
+				"I love me too",
+				"Glad to hear it"
+			]
+		},
+		{
+			trigger: [
+				"im good",
+				"im great",
+				"im doing fantastic"
+			],
+			reply: [
+				"Glad to hear it",
+				"That's nice",
+				"Great!"
 			]
 		}
 	];
