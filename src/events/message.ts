@@ -225,7 +225,7 @@ module.exports = class MessageEvent extends ClientEvent {
 	];
 
 	public async run(message: Message) {
-		if(message.webhookID || message.author.bot || (message.channel.type !== "dm" && message.channel.id !== process.env.TALK_CHANNEL_ID) || !message.content) return;
+		if(message.webhookID || message.author.bot || (message.channel.type !== "dm" && message.channel.id !== process.env.TALK_CHANNEL_ID) || !message.content || message.content.endsWith("--no-talk")) return;
 
 		// replace unneeded characters and caps
 		let messageText: string = message.content.toLowerCase().replace(/[^\w\s\d]/gi, "");
