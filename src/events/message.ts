@@ -243,9 +243,10 @@ module.exports = class MessageEvent extends ClientEvent {
 		let lastWord: string = "";
 		for(const index in words){
 			const word = words[index];
-			if(lastWord == word){
+			if(lastWord === word){
 				words.splice(parseInt(index), 1);
 			}
+			lastWord = word;
 		}
 		messageText = words.join(" ");
 
